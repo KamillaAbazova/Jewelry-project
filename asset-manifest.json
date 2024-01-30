@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Jewelry-project/static/css/main.7cf0f043.css",
-    "main.js": "/Jewelry-project/static/js/main.0d501ab4.js",
+    "main.js": "/Jewelry-project/static/js/main.af9bccfb.js",
     "static/js/787.fc1aa96f.chunk.js": "/Jewelry-project/static/js/787.fc1aa96f.chunk.js",
     "static/media/loupe.png": "/Jewelry-project/static/media/loupe.1d92f967297920015306.png",
     "index.html": "/Jewelry-project/index.html",
     "main.7cf0f043.css.map": "/Jewelry-project/static/css/main.7cf0f043.css.map",
-    "main.0d501ab4.js.map": "/Jewelry-project/static/js/main.0d501ab4.js.map",
+    "main.af9bccfb.js.map": "/Jewelry-project/static/js/main.af9bccfb.js.map",
     "787.fc1aa96f.chunk.js.map": "/Jewelry-project/static/js/787.fc1aa96f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cf0f043.css",
-    "static/js/main.0d501ab4.js"
+    "static/js/main.af9bccfb.js"
   ]
 }
