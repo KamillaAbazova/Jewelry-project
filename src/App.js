@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
@@ -17,16 +17,29 @@ import Contact from "./Contact";
 import { ShoppingCart } from "./ShoppingCart";
 import icon from "./loupe.png"
 import { LoaderPage } from "./Loader/LoaderPage";
+import { data } from "./data";
 
 function App() {
 
   const [text, setText] = useState("");
+  const [search, setSearch] = useState("");
   const [stateLoader, setStateLoader] = useState(true);
+  
+  const handleSearch = () => {
+    setSearch(text)
+  }
+
+  const filteredProducts = useMemo( () => data.filter((product) => {
+    return product.searchTerm.toLowerCase().includes(search.toLowerCase())
+  }), [search])
  
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    handleSearch();
+  }
  
   const inputRef = useRef();
-  const container = useRef();
-
+ 
   useGSAP(() => {
     gsap.from(".link", {y: -30, duration: 5, opacity: 0, delay: 3});
     gsap.from(".header", {y: -30, duration: 3, opacity: 0, delay: 1});
@@ -52,12 +65,12 @@ function App() {
       <img className="logo" src="https://avatars.mds.yandex.net/i?id=2a00000179f493cca6c27200cead502d1752-4012839-images-thumbs&n=13" alt="logo" width="100px"/>
       <h1>DiamArt</h1>
       </div>
-      <div className="input-button">
+      <form className="input-button" onSubmit={onFormSubmit}>
       <input ref={inputRef} value={text} className="field" onChange={e => setText(e.target.value)}/>
       <button className="loupe" onClick={focus}><img src={icon} width="30px" height="30px" alt="icon"/></button>
-      </div>
+      </form>
     
-    <nav ref={container}>
+    <nav>
       <Link className="link" to = "/">Home</Link>
       <Link className="link" to = "/about">About</Link>
       <Link className="link" to = "/shop">Shop</Link>

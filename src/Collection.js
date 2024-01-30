@@ -12,7 +12,7 @@ const Collection = ({jewelryList}) => {
                 <h3 className='item-name'>{name}</h3>
                 <h2 className='price'>{price}</h2>
                 </div>
-                <button className="btn-add">Add to the Cart</button>
+                <button className="btn-add">Add to Cart</button>
                 </div>
 
             )
