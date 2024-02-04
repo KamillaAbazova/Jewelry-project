@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { data } from './data';
 
 import Buttons from './Buttons';
 import Collection from './Collection';
 
-function Shop() {
-  const [jewelryList, setJewelryList] = useState(data);
+function Shop({filteredProducts}) {
+  const [jewelryList, setJewelryList] = useState(filteredProducts);
+
+  useEffect(() => {
+    setJewelryList(filteredProducts)
+  }, [filteredProducts])
 
   const filteredItems= (searchTerm) => {
    const newJewelry = data.filter(element => element.searchTerm === searchTerm);
     setJewelryList(newJewelry);
   }
-
 
   return (
     <div className='shop-cont'>
