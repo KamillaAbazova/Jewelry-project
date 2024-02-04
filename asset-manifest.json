@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Jewelry-project/static/css/main.7cf0f043.css",
-    "main.js": "/Jewelry-project/static/js/main.af9bccfb.js",
+    "main.css": "/Jewelry-project/static/css/main.3883fb76.css",
+    "main.js": "/Jewelry-project/static/js/main.bca00222.js",
     "static/js/787.fc1aa96f.chunk.js": "/Jewelry-project/static/js/787.fc1aa96f.chunk.js",
     "static/media/loupe.png": "/Jewelry-project/static/media/loupe.1d92f967297920015306.png",
     "index.html": "/Jewelry-project/index.html",
-    "main.7cf0f043.css.map": "/Jewelry-project/static/css/main.7cf0f043.css.map",
-    "main.af9bccfb.js.map": "/Jewelry-project/static/js/main.af9bccfb.js.map",
+    "main.3883fb76.css.map": "/Jewelry-project/static/css/main.3883fb76.css.map",
+    "main.bca00222.js.map": "/Jewelry-project/static/js/main.bca00222.js.map",
     "787.fc1aa96f.chunk.js.map": "/Jewelry-project/static/js/787.fc1aa96f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cf0f043.css",
-    "static/js/main.af9bccfb.js"
+    "static/css/main.3883fb76.css",
+    "static/js/main.bca00222.js"
   ]
 }
