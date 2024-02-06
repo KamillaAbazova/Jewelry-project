@@ -30,15 +30,18 @@ nav {
   background-color: #F5EEE6;
   height: 90px;
 }
+.container-header {
+  display: flex;
 
+}
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #F5EEE6;;
 }
 .field {
   width: 200px;
-  height: 30%;
+  height: 25%;
   margin-top: 35px;
   margin-left: 220px;
   margin-bottom: 35px;

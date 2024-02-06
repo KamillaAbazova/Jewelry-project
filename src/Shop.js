@@ -5,11 +5,13 @@ import Buttons from './Buttons';
 import Collection from './Collection';
 
 function Shop({filteredProducts}) {
+  
   const [jewelryList, setJewelryList] = useState(filteredProducts);
 
   useEffect(() => {
     setJewelryList(filteredProducts)
   }, [filteredProducts])
+
 
   const filteredItems= (searchTerm) => {
    const newJewelry = data.filter(element => element.searchTerm === searchTerm);
