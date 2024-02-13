@@ -1,14 +1,9 @@
-import { useRef } from "react";
 import icon from './loupe.png';
-
+import { useNavigate } from "react-router";
 
 export const Field = ({text, handleText, onFormSubmit}) => {
+  const navigate = useNavigate();
     
-      const inputRef = useRef();
-      const focus = () => {
-        inputRef.current.focus()
-      }
-     
     return (
         <div className="container-header">
           <div className="header-logo">
@@ -16,8 +11,8 @@ export const Field = ({text, handleText, onFormSubmit}) => {
             <h1>DiamArt</h1>
           </div>
           <form className="input-button" onSubmit={onFormSubmit}>
-            <input ref={inputRef} value={text} className="field" onChange={handleText}/>
-            <button className="loupe" onClick={focus}><img src={icon} width="30px" height="30px" alt="icon"/></button>
+            <input value={text} className="field" onChange={handleText} />
+            <button className="loupe" onClick={() => {navigate('/shop')}}><img src={icon} width="30px" height="30px" alt="icon"/></button>
           </form>
         </div>
     )

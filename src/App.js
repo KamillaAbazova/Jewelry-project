@@ -6,8 +6,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
 } from "react-router-dom";
+
 
 import About from "./About";
 import Home from "./Home";
@@ -21,13 +22,14 @@ import { data } from "./data";
 function App() {
     const [text, setText] = useState("");
     const [search, setSearch] = useState("");
+    
 
     const handleText = (e) => {
       setText(e.target.value);
     }
 
     const handleSearch = () => {
-      setSearch(text)
+      setSearch(text);
     }
 
     useEffect(() => {
@@ -42,6 +44,8 @@ function App() {
       e.preventDefault();
       handleSearch();
     }
+
+
     const filteredProducts = useMemo( () => data.filter((product) => {
       return product.searchTerm.toLowerCase().includes(search.toLowerCase())
     }), [search])
@@ -52,7 +56,7 @@ function App() {
   })
 
 
-  return (<div>
+  return (
   <Router>
     <div className="menu-container">
     <div className="header">
@@ -75,7 +79,7 @@ function App() {
     </Routes>
     </div>
   </Router>
-  </div>)
+  )
   
 }
 
