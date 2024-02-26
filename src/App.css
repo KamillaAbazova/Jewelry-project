@@ -210,6 +210,10 @@ p {
   border-radius: 50px;
   padding: 5px;
 }
+.btn-add:hover {
+  background-color: black;
+  color: white;
+}
 label {
   font-family: 'Alex Brush', cursive;
   font-size: 25px;
@@ -243,9 +247,20 @@ textarea {
 .submit:hover {
   background-color: goldenrod;
 }
+.header-logo {
+  display: flex;
+}
+.qiantity {
+  padding: 10px;
+  margin: 10px;
+}
+.cartIcon {
+  padding: 10px;
+  width: 100px;
+}
 table {
   width: 80%;
-  padding: 20px;
+  padding: 10px;
   
 }
 thead {
@@ -256,52 +271,35 @@ thead {
 tbody {
   font-family: 'Gilda Display', serif;
   text-align: center;
- 
 }
-td {
+td,th {
   border: 1px solid black;
   padding: 5px;
+  width: 30%;
 }
 .total-price {
   color: #736666;
   font-weight: bold;
 }
-.count {
-  background-color: black;
-  color: white;
-}
-span {
-  font-weight: bold;
-}
 .remove {
   background-color: red;
 }
-.delete-all {
+.total {
   font-family: 'Gilda Display', serif;
-}
-.total-amount {
-  font-family: 'Gilda Display', serif;
-  text-transform: uppercase;
-  padding: 20px;
-  margin-left: 20px;
-}
-
-.order {
-  padding: 20px;
-  background-color: #A87C7C;
-  font-family: 'Gilda Display', serif;
-  border: 1px solid black;
-  font-weight: bold;
-}
-.delete-all {
-  background-color: #F5EEE6;
-  padding: 20px;
   margin-left: 50px;
-  font-family: 'Gilda Display', serif;
-  border: 1px solid black;
+  margin-top: 0;
 }
-.header-logo {
-  display: flex;
+.info {
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
+  width: 70%;
+}
+.showInfo {
+  width: 70%;
+  border: none;
+  color: #EEF0E5;
+  background-color: #736666;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -368,15 +366,14 @@ span {
   .btn-add {
     font-size: 15px;
   }
-  table {
-    padding: 10px;
-  }
   thead {
     font-size: 20px;
   }
-  .order, .delete-all {
-    padding: 10px;
-  }
+  
+table {
+  width: 80%;
+  padding: 20px;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -430,7 +427,6 @@ span {
   .footer {
     justify-content: flex-start;
   }
- 
   p {
     font-size: 12px;
   }
@@ -471,15 +467,18 @@ span {
   }
   table {
     width: 60%;
-  }
-  .order, .delete-all {
-    padding: 5px;
+    padding: 10px;
   }
   tbody {
     font-size: 12px;
   }
-  .count {
-    width: 40px;
+  .info {
+    font-size: 10px;
+    width: 50%;
   }
-
+  .showInfo {
+    width: 50%;
+    font-size: 10px;
+  }
+  
 }

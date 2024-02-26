@@ -1,5 +1,5 @@
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
@@ -15,37 +15,14 @@ import Home from "./Home";
 import './App.css';
 import Shop from "./Shop";
 import Contact from "./Contact";
-import { ShoppingCart } from "./ShoppingCart";
 import { Field } from "./Field";
 import { data } from "./data";
+import { Cart } from "./Cart/Cart";
 
 function App() {
-    const [text, setText] = useState("");
+    
     const [search, setSearch] = useState("");
     
-
-    const handleText = (e) => {
-      setText(e.target.value);
-    }
-
-    const handleSearch = () => {
-      setSearch(text);
-    }
-
-    useEffect(() => {
-      if (text.length === 0) {
-        setSearch("");
-      } else {
-        setSearch(text);
-      }
-    }, [text]);
-
-    const onFormSubmit = (e) => {
-      e.preventDefault();
-      handleSearch();
-    }
-
-
     const filteredProducts = useMemo( () => data.filter((product) => {
       return product.searchTerm.toLowerCase().includes(search.toLowerCase())
     }), [search])
@@ -55,12 +32,11 @@ function App() {
     gsap.from(".header", {y: -30, duration: 3, opacity: 0, delay: 1});
   })
 
-
   return (
   <Router>
     <div className="menu-container">
     <div className="header">
-      <Field text={text} handleText={handleText} onFormSubmit={onFormSubmit} search={search} />
+      <Field search={search} setSearch={setSearch} />
       
     <nav>
       <Link className="link" to = "/Jewelry-project">Home</Link>
@@ -75,7 +51,7 @@ function App() {
       <Route path = "/about" element={<About/>}/>
       <Route path = "/shop" element={<Shop filteredProducts={filteredProducts} />}/>
       <Route path = "/contact" element={<Contact/>}/>
-      <Route path = "/cart" element={<ShoppingCart/>}/>
+      <Route path = "/cart" element={<Cart/>}/>
     </Routes>
     </div>
   </Router>

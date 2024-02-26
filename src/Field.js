@@ -1,9 +1,29 @@
+import { useEffect, useState } from 'react';
 import icon from './loupe.png';
 import { useNavigate } from "react-router";
 
-export const Field = ({text, handleText, onFormSubmit}) => {
+export const Field = ({setSearch}) => {
+  const [text, setText] = useState("");
   const navigate = useNavigate();
-    
+
+  const handleText = (e) => {
+    setText(e.target.value);
+  }
+  const handleSearch = () => {
+    setSearch(text);
+  }
+  useEffect(() => {
+    if (text.length === 0) {
+      setSearch("");
+    } else {
+      setSearch(text);
+    }
+  }, [text, setSearch]);
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    handleSearch();
+  }
     return (
         <div className="container-header">
           <div className="header-logo">
