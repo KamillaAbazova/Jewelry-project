@@ -1,0 +1,23 @@
+.info {
+    font-family: 'Gilda Display', serif;
+    font-size: 15px;
+    width: 70%;
+  }
+  .showInfo {
+    width: 70%;
+    border: none;
+    color: #EEF0E5;
+    background-color: #736666;
+    font-size: 15px;
+  }
+
+@media only screen and (max-width: 600px) {
+    .info {
+        font-size: 10px;
+        width: 50%;
+      }
+      .showInfo {
+        width: 50%;
+        font-size: 10px;
+      }
+}

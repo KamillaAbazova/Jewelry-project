@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { data } from './data';
-
-import Buttons from './Buttons';
-import Collection from './Collection';
+import './style.css';
+import Buttons from '../Buttons/Buttons';
+import Collection from '../Collection/Collection';
+import { data } from '../data';
 
 function Shop({filteredProducts}) {
   

@@ -1,0 +1,42 @@
+.about-cont {
+    background-color: #EEF0E5;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-header {
+    font-family: 'Gilda Display', serif;
+    font-size: 40px;
+    color: goldenrod;
+    letter-spacing: 3px;
+  }
+  .description {
+    background-color: #C7B7A3;
+  
+  }
+  .next {
+    background-color: #A87C7C;
+    padding: 10px;
+    font-family: 'Gilda Display', serif;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+  }
+
+@media only screen and (max-width: 900px) {
+    .about-header {
+        font-size: 30px;
+      }
+    .picture {
+        width: 100%;
+      }
+      .next {
+        width: 70px;
+        font-size: 10px;
+      }
+
+}
+  

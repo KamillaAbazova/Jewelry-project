@@ -1,0 +1,55 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product-card {
+    padding: 3%;
+    flex-grow: 1;
+    flex-basis: 20%;
+  }
+  .item-name {
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+    
+  }
+  .price {
+    font-family: 'Alex Brush', cursive;
+    color: #736666;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .btn-add {
+    font-family: 'Gilda Display', serif;
+    background-color: #A87C7C;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+  }
+  .btn-add:hover {
+    background-color: black;
+    color: white;
+  }
+  .half-circle {
+    width: 300px;
+    height: 300px; 
+    border-top-left-radius: 210px;  
+    border-top-right-radius: 210px; 
+    border: 2px solid gray;
+    border-bottom: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .half-circle {
+        width: 250px;
+      }
+      .item-name {
+        font-size: 15px;
+      }
+      .price {
+        font-size: 23px;
+      }
+      .btn-add {
+        font-size: 15px;
+      }
+}

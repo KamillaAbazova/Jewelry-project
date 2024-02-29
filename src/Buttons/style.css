@@ -1,0 +1,33 @@
+.buttons-cont {
+    display: flex;
+    justify-content: center;
+  }
+  .btn-category {
+    background-color: #A87C7C;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 120px;
+    font-family: 'Gilda Display', serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+  }
+  .btn-category:hover {
+    background-color: black;
+    color: white;
+  }
+  @media only screen and (max-width: 900px) {
+    .btn-category {
+        margin: 10px;
+        width: 100px;
+      }
+  }
+  @media only screen and (max-width: 600px) {
+    .btn-category {
+        margin: 5px;
+        width: 60px;
+        font-size: 10px;
+        padding: 5px;
+      }
+  }

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { getCartItems, getTotalPrice } from "../redux/cartSlice"
 import { CartItem } from "./CartItem";
+import './style.css';
 
 export const Cart = () => {
     const cartItems = useSelector(getCartItems);
@@ -17,6 +18,6 @@ export const Cart = () => {
             </tr>
         </thead>
         </table>
-        {cartItems.map(cartItem => <CartItem cartItem={cartItem}/>)}
+        {cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem}/>)}
     </div>)
 }

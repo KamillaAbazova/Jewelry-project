@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react';
 import icon from './loupe.png';
 import { useNavigate } from "react-router";
+import './style.css';
+import { useGSAP } from '@gsap/react';
+import gsap from "gsap";
 
 export const Field = ({setSearch}) => {
   const [text, setText] = useState("");
   const navigate = useNavigate();
+
+  useGSAP(() => {
+    gsap.from(".input-button", {y: -30, duration: 5, opacity: 0, delay: 3});
+  })
 
   const handleText = (e) => {
     setText(e.target.value);

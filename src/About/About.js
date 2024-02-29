@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { dataAbout } from "./dataAbout";
+import { dataAbout } from "../dataAbout";
+import './style.css';
 
 function About() {
     const [fact, setFact] = useState(0);

@@ -1,0 +1,91 @@
+
+.home {
+    background-image: url("https://img.freepik.com/free-photo/model-demonstrating-earrings-and-ring_7502-7042.jpg?size=626&ext=jpg&ga=GA1.1.1202550608.1704880132&semt=ais");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin: 0;
+    background-position: center;
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    background-color: #A87C7C;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+   
+  }
+  .media {
+    padding: 20px;
+  }
+  .shipping {
+    font-family: 'Gilda Display', serif;
+    font-size: 30px;
+    letter-spacing: 6px;
+    }
+  
+  .slogan {
+    margin-top: 150px;
+    margin-bottom: 0;
+    letter-spacing: 10px;
+    font-family: 'Gilda Display', serif;
+    font-size: 60px;
+  }
+  .btn-shop {
+    width: 150px;
+    height: 60px;
+    font-family: 'Gilda Display', serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  .btn-shop:hover {
+    background-color: #A87C7C;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .slogan {
+        font-size: 50px;
+      }
+    .shipping {
+        font-size: 25px;
+      }
+    .home {
+        background-position: right;
+      }
+      
+  }
+
+  @media only screen and (max-width: 600px) {
+    .slogan {
+        font-size: 25px;
+        letter-spacing: 4px;
+      }
+      .shipping {
+        font-size: 15px;
+        letter-spacing: 2px;
+      }
+      .btn-shop {
+        font-size: 12px;
+        margin-top: 60px;
+        width: 100px;
+        height: 55px;
+        margin-left: 80px;
+      }
+      .media {
+        padding: 10px;
+      }
+      .heading {
+        align-items: start;
+        padding: 10px;
+      }
+      .footer {
+        justify-content: flex-start;
+      }
+  }

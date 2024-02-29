@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { ChangeQuantity } from "./Cart/ChangeQuantity";
-import { addItemToCart } from "./redux/cartSlice";
+import { ChangeQuantity } from "../Cart/ChangeQuantity";
+import { addItemToCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import { ProductInfo } from "./ProductInfo";
+import { ProductInfo } from "../ProductInfo/ProductInfo";
+import './style.css';
 
 const Collection = ({jewelryList, element}) => {
-  const [quantity, setQuantity] =useState(1);
+  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
     return (

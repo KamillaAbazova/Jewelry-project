@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import insta from './insta.png';
 import whatsapp from './whatsapp.png';
 import email from './email.png';
-import './App.css'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import './style.css';
 
 function Home() {
 
@@ -24,7 +24,7 @@ function Home() {
             <div className="heading">
             <h2 className="slogan">"Perfect by nature"</h2>
             <p className="shipping">Free shipping all over Europe</p>
-            <Link to = "http://localhost:3000/shop">
+            <Link to = "/shop">
             <button className="btn-shop">SHOP</button></Link>
             </div>
         </div>

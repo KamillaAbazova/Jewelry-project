@@ -1,0 +1,87 @@
+.contactCont {
+    background-image: url("https://img.freepik.com/premium-photo/gold-diamond-ring-macro-soft-focus-3d-rendering_169963-1688.jpg?size=626&ext=jpg&ga=GA1.1.1202550608.1704880132&semt=ais фон");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 200px;
+    justify-content: center;
+    
+  }
+  .about-header {
+    font-family: 'Gilda Display', serif;
+    font-size: 40px;
+    color: goldenrod;
+    letter-spacing: 3px;
+  }
+  label {
+    font-family: 'Alex Brush', cursive;
+    font-size: 25px;
+    color: white;
+  }
+  input {
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-family: 'Gilda Display', serif;
+  }
+  textarea {
+    width: 400px;
+    padding: 5px;
+  }
+  .contact-head {
+    padding-right: 100px;
+  }
+  .submit {
+    padding: 10px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #A87C7C;
+    border: none;
+    color: white;
+    font-family: 'Alex Brush', cursive;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+  .submit:hover {
+    background-color: goldenrod;
+  }
+@media only screen and (max-width: 900px) {
+    .about-header {
+        font-size: 30px;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    label {
+        font-size: 18px;
+      }
+      input {
+        width: 100px;
+      }
+      textarea {
+        width: 200px;
+        padding: 5px;
+      }
+      .contactCont {
+        align-items: flex-start;
+        padding: 10px;
+        
+      }
+      form {
+        margin-left: 30px;
+      }
+      .about-header {
+        margin-left: 50px;
+        font-size: 25px;
+      }
+      .submit {
+        width: 70px;
+        font-size: 25px;
+        margin-left: 70px;
+      }
+      
+}
